@@ -1,0 +1,88 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "proful",
+  "title": "Proful",
+  "description": "procrastinate mindfully",
+  "icon": "command-icon.png",
+  "author": "hkandala",
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "proful",
+      "title": "Proful",
+      "description": "procrastinate mindfully",
+      "mode": "menu-bar",
+      "interval": "1m"
+    },
+    {
+      "name": "toggle-proful",
+      "title": "Toggle Proful Visibility",
+      "description": "toggle proful visibility from the menu bar",
+      "mode": "no-view"
+    },
+    {
+      "name": "procrastinate",
+      "title": "Procrastinate",
+      "description": "start a procrastinating session",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "title",
+          "type": "text",
+          "placeholder": "instagram, youtube...",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "focus",
+      "title": "Focus",
+      "description": "start a focus session",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "title",
+          "type": "text",
+          "placeholder": "work, study...",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "chill",
+      "title": "Chill",
+      "description": "start a chill session",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "title",
+          "type": "text",
+          "placeholder": "youtube, netflix...",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.67.1",
+    "@raycast/utils": "^1.4.8"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.6",
+    "@types/node": "20.8.10",
+    "@types/react": "18.2.27",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}
